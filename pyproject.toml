@@ -1,0 +1,21 @@
+[project]
+name = "quarto-starter"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "maxjost42", email = "max.jost@student.tugraz.at" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "marimo>=0.13.11",
+    "matplotlib>=3.10.3",
+    "numpy>=2.2.6",
+]
+
+[project.scripts]
+quarto-starter = "quarto_starter:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
