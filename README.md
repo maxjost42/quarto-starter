@@ -7,16 +7,16 @@ Quarto is a code notebook Tool like `jupyter-notebooks`. The main differences ar
 
 * that quarto also has the capabilities for converting your notebook into a nice PDF report with most of the formatting, cross referencing and image/math/text alignment features you already know from LaTeX (In fact LaTeX is part of the quarto Toolchain therefore quarto most likely converts it's simpler commands into LaTeX commands on the Backend)
 * that the plain quarto notebook files, are not unreadable jibberish like jupyters files, but they are written in plain Markdown, where the Markdown code blocks are the actual code cells of your notebook. This makes quarto notebook files exeptionally nice to read and makes them perfectly compatible with git.
-* You can define multible output File types for your quarto notebooks, two of them are  HTML (usefull if you wan't to publish your notebook as a dynamic or static website) and PDF (usefull If you have to do assigment/work/lab/development reports.
+* You can use multiple programming Languages in the same Notebook. The possible options are python, R, Julia and Observable
+* You can define multible output File types for your quarto notebooks, two of them are  HTML (usefull if you wan't to publish your notebook as a dynamic or static website) and PDF (usefull If you have to do assigment/work/lab/development reports).
 
 So you can think of quarto as the LaTeX under the code notebook tools. And it's workflow is also the same: You write your `.qmd` (abbrev. for Quarto Markdown) File like the `test.qmd` in this repo and then you call `quarto preview test.qmd` to render a preview of your output File types or use `quarto render test.qmd` to generate the final output files.
 
 **Main Reasons To Use Quarto:**
 (later edit:) "Quarto is the god of code notebooks".
-Quarto is a kind of document formating tool (like LaTeX (In fact LaTeX is part of the Quarto Toolchain)) that enables the creation of (interactive) reports in HTML-, PDF-, Presentation-formats from code notebooks like jupyter, marimo or RMarkdown.
 
 **Main Interface**
-Quarto is controled through commands (in a YAML format) that you write as comments in your Notebook. This has the benefit that you can (additionally to the Principle "code is documentation") live by the Principle "code is vizualization and documentation formatting". Enabelingyou to becomethe true "All the work in one single File" kind of person.
+Quarto is controled through commands (in a YAML format) that you write as comments in your Notebook. This has the benefit that you can (additionally to the Principle "code is documentation") live by the Principle "code is vizualization and documentation formatting". Enabeling you to become the true "All the work in one single File" kind of person (Which obviously isn't perfect for every situation).
 
 ## Installations required from you (sadly)
 For now it looks like you need to set up a few things that are not automatically installed by the beautifull package manager [`uv`](https://docs.astral.sh/uv/).
@@ -34,7 +34,7 @@ When you are done with that run:
 ```bash
 quarto check
 ```
-To see which tools from below you still need to install.
+To see which tools from below you still need to install (but no need to install them for the `test.qmd` notebook).
 
 ## rendering the test quarto notebook containing only python
 In this project there already exists a `test.qmd` File, which includes a basic plot and some Text, to check if your installation is working. But the following steps apply to your own new quarto notebooks as well.
@@ -80,4 +80,4 @@ quarto-starter
 ```
 The `git` commands add all the files above to the local git repo (don't worry about the `.python-version` File since it's excluded in the `.gitignore`.
 And finally `gh repo create` (Github-CLI Tool) adds the local repo to your Github repository list.
-**And you never have to leave the CLI ^^**
+**And you never have to leave the Terminal ^^**
