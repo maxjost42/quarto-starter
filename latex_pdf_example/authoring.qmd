@@ -1,0 +1,83 @@
+---
+title: "Quarto Document"
+author: "Norah Jones,Max Jost"
+toc: true
+number-sections: true
+highlight-style: pygments
+bibliography: references.bib
+format: 
+  html: 
+    code-fold: true
+    html-math-method: mathjax
+    include-in-header: mathjax.html
+  pdf: 
+    geometry: 
+      - top=25mm
+      - left=20mm
+    cite-method: biblatex
+---
+
+## Textures
+
+- Smooth
+- Bumpy
+- Fuzzy
+
+## Very long jibberish
+This is useless better look at [@sec-formulas; @sec-code]
+
+löshdgöoaljsädpgj asdk gäaöjsd göasdjäöljkgäö sldjä göjägö sjdäg öaSDJÄ GFAJHPD FÜSDFKIHÄJÖLIJKS LÖÄJLSÖLGJKÄADDSFGOJA S'KA'ÄÖLSDKÖGAJK ASWODJG LKIJAS DGKÖJ AÖSKJDG ÖLAKJREW NHJAÄLKSDLKFJGAÖSLKD GÄOAS DG POIÖSAJ DLÖGJ AÖIS GASKÖL DGIKH AWLUIEGR UWQEzpi uqwütoöä gky-fsx.gn a.j,sdh fa.kjg swioweu fasökj kgö-j asödgkj aäösokreh tauwel fgäaösdlkj g-lajshrdt-öol-aksgälkhvseldkjgthjpyfga hnldj rf awsdjhf aksdi fyöosu floksdgoa poeshf öalwksjgälajhs dfj aäsdk jfgash yfxöajk ykföajshd göösadk gd
+
+asjdhg ölkasjd fg asfdg sadok a#äölskd fgaläsk dglö aäksd gfäpasj dgälö jasäöd lgäöas dgäöka sdäölkg äöasjd gäöaj sdäöljäösad gfyööäl#salk gäöla ksd#öälk sd#aöksd#ägkl #sdöl #aös dgköj asäöldkglkdägösulkv asd jhfg kjsad göh äösdag
+
+## Formulas {#sec-formulas}
+Vector math is easy as can be seen in \eqref{eq-vectormath1} and \eqref{eq-vectormath2}.
+
+- Inline: $\vec{x}=\mathbf{A}\vec{y}$ with $\vec{x}$, $\vec{y}$ $\in$ $\mathbb{R}^2$
+
+Not cross referenced equation:
+$$ 1+1 = 2 $$
+
+Cross referenced Equation:
+\begin{equation}\label{eq-vectormath1}
+    \vec{x}=\mathbf{A}\vec{y},\quad
+    \text{with} \quad
+    \vec{x},\vec{y} \in \mathbb{R}^2
+\end{equation}
+
+Cross referenced aligned Math:
+\begin{equation}\label{eq-vectormath2}
+    \begin{aligned}
+        x_1 =& a_{11} y_1 + a_{12} y_2 \\
+        x_2 =& a_{21} y_1 + a_{22} y_2 + 0
+    \end{aligned}
+\end{equation}
+
+## Citation
+Some people write funny papers [@lund2020makingraingivingtelescope]. This I find very funny.
+
+
+## Code {#sec-code}
+This is some sample code from medieval times that tells us what the Plague doctor will do with our scratched leg:
+```{python}
+# automatic Procedure to evaluate Plague doctor's decisions:
+import numpy as np
+r = np.random.rand(1)[0]
+
+if r > 0.5:
+    print("amputate")
+else:
+    print("amputate with a rock")
+```
+
+
+And here we hide code and only show the result as @fig-simple:
+```{python}
+#| echo: false
+#| label: fig-simple
+#| fig-cap: "Simple Plot"
+import matplotlib.pyplot as plt
+plt.plot([1,23,2,4])
+plt.show()
+```
+## References
