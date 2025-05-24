@@ -80,4 +80,10 @@ import matplotlib.pyplot as plt
 plt.plot([1,23,2,4])
 plt.show()
 ```
+
+And finally @lst-code, a code snippet with no output:
+
+```{#lst-code .py lst-cap="sad Code"}
+print("Let me please Say something I'm a lonely Computer")
+```
 ## References
