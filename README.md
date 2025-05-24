@@ -13,10 +13,10 @@ Quarto is a code notebook Tool like `jupyter-notebooks`. The main differences ar
 So you can think of quarto as the LaTeX under the code notebook tools. And it's workflow is also the same: You write your `.qmd` (abbrev. for Quarto Markdown) File like the `test.qmd` in this repo and then you call `quarto preview test.qmd` to render a preview of your output File types or use `quarto render test.qmd` to generate the final output files.
 
 **Main Reasons To Use Quarto:**
-(later edit:) "Quarto is the god of code notebooks".
+"Quarto is the god of code notebooks" - Max 2025 driving with the hype train
 
 **Main Interface**
-Quarto is controled through commands (in a YAML format) that you write as comments in your Notebook. This has the benefit that you can (additionally to the Principle "code is documentation") live by the Principle "code is vizualization and documentation formatting". Enabeling you to become the true "All the work in one single File" kind of person (Which obviously isn't perfect for every situation).
+Quarto is controled through commands (in a YAML format) that you write as comments in your Notebook. This has the benefit that you can (additionally to the Principle "code is documentation") live by the Principle "code is vizualization and documentation formatting". Enabeling you to become the true "All the work in one single File" kind of person (Which obviously isn't perfect for every situation). For further explanations on the quarto commands, read through the comments in `test.qmd`
 
 ## Installations required from you (sadly)
 For now it looks like you need to set up a few things that are not automatically installed by the beautifull package manager [`uv`](https://docs.astral.sh/uv/).
@@ -28,9 +28,9 @@ uv sync
 This should automatically install all dependencies **except the ones below:**
 
 ### Quarto
-Install Quarto for your OS with [this Installation Guide](https://quarto.org/docs/get-started/)
+Install Quarto for your OS with [this Installation Guide](https://quarto.org/docs/get-started/). For Windows, this means just downloading the msi Installer, restarting your PC once and everything should be working already.
 
-When you are done with that run:
+When you are done with that run (you should do this with your python venv activated):
 ```bash
 quarto check
 ```
@@ -45,10 +45,12 @@ Then you have to activate the environment before you run quarto by:
 ```bash
 # on Linux
 source .venv/bin/activate
-# use 'deactivate' to deactivate the environment again
+# use 'deactivate' if you want  to deactivate the environment again
 ```
 ```PowerShell
-# TODO: On windows
+# on windows
+.\.venv\Scripts\activate
+# also use 'deactivate' if you want to deactivate the environment again
 ```
 
 And then run
@@ -78,6 +80,6 @@ quarto-starter
 │       └── __init__.py
 └── uv.lock
 ```
-The `git` commands add all the files above to the local git repo (don't worry about the `.python-version` File since it's excluded in the `.gitignore`.
+With `nvim` I edited the contents of the README. The `git` commands add all the files above to the local git repo (you can delete the `.python-version` File since it's just there to define the python version and that is already handled by uv in the `pyproject.toml`).
 And finally `gh repo create` (Github-CLI Tool) adds the local repo to your Github repository list.
 **And you never have to leave the Terminal ^^**
