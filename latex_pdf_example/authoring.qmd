@@ -10,7 +10,7 @@ format:
     code-fold: true
     html-math-method: mathjax
     include-in-header: mathjax.html
-  pdf: 
+  pdf:
     geometry: 
       - top=25mm
       - left=20mm
@@ -87,4 +87,40 @@ And finally @lst-code, a code snippet with no output:
 ```{#lst-code .py lst-cap="sad Code"}
 print("Let me please Say something I'm a lonely Computer")
 ```
+\newpage
+## Code output tables
+In @tbl-simple you can see the Markdown way of code generated tables.
+
+```{python}
+#| label: tbl-simple
+#| tbl-cap: Some table for testing
+#| echo: false
+
+from IPython.display import Markdown
+from tabulate import tabulate
+table = [["Sun","696,000",1.989e30],
+         ["Earth","6,371",5.972e24],
+         ["Moon","1,737",7.34e22],
+         ["Mars","3,390",6.39e23]]
+Markdown(tabulate(
+  table, 
+  headers=["Astronomical object",r"$R_{EU}$ (km)", "mass (kg)"]
+))
+```
+
+In @tbl-advanced you can see the pandas LaTeX tables.
+
+```{python}
+#| label: tbl-advanced
+#| tbl-cap: Some LaTeX table for testing
+#| tbl-pos: H
+#| echo: false
+#| output: asis
+
+from quarto_starter.test_module import print_some_table
+
+print_some_table()
+```
+
+
 ## References
