@@ -76,6 +76,7 @@ And here we hide code and only show the result as @fig-simple:
 #| echo: false
 #| label: fig-simple
 #| fig-cap: "Simple Plot"
+#| fig-pos: H
 import matplotlib.pyplot as plt
 plt.plot([1,23,2,4])
 plt.show()

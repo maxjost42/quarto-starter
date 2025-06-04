@@ -40,6 +40,12 @@ quarto check
 ```
 To see which tools from below you still need to install (but no need to install them for the `test.qmd` notebook).
 
+### TinyTex
+If you have not already installed a LaTeX distribution on your machine, quarto will not be able to render PDF outputs. In this case install tinytex:
+```bash
+quarto install tinytex
+```
+
 ## rendering the test quarto notebook containing only python
 In this project there already exists a `test.qmd` File, which includes a basic plot and some Text, to check if your installation is working. But the following steps apply to your own new quarto notebooks as well.
 
