@@ -86,4 +86,31 @@ And finally @lst-code, a code snippet with no output:
 ```{#lst-code .py lst-cap="sad Code"}
 print("Let me please Say something I'm a lonely Computer")
 ```
+
+
+## Cell persistance test
+In this small Test I wan't to check, if variables persist over multiple cells, since this is quite important for specific workflows.
+
+First cell creates some variables:
+```{python}
+var_a = "Hello I'm a variable"
+print(var_a)
+dict_a = {"H":"ello", "I":"'m", "a":"", "d":"ictionary"}
+print(dict_a)
+# here we also already test if the imports persist from the above cells
+func_a = lambda x,a: a*np.sin(x)
+print(func_a(np.pi/2,5))
+
+```
+
+In second cell we try to call them again
+```{python}
+print(var_a+ " (still)")
+print(str(dict_a)+ " (still)")
+print(func_a(np.pi*3/2,5))
+```
+
+
+
+
 ## References
